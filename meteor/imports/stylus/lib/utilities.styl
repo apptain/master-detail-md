@@ -1,0 +1,21 @@
+//Kezz is awesome http//webdesign.tutsplus.com/courses/become-a-css-superhero-with-stylus
+$phi = 1.618
+$golden_major = 0.61
+$golden_minor = 0.38
+
+percent($num)
+  unit(round($num * 100), '%')
+
+//css-tricks and treehouse Aborted due to warnings.are pretty cool too
+$padding = 40px
+
+breakpoint($point)
+  if $point == papa-bear
+    @media (min-width 801px)
+       block 
+  else if $point == mama-bear
+    @media (max-width 800px)
+       block 
+  else if $point == baby-bear
+    @media (max-width 450px)
+       block

@@ -1,0 +1,83 @@
+﻿@import 'lib/normalize'
+@import 'lib/colors'
+@import 'lib/utilities'
+@import 'lib/fonts'
+@import 'lib/typography'
+
+@import 'lib/components/modal'
+
+html
+body
+  margin 0
+  padding 0
+  height 100%
+  background $soft_gradient
+
+.help-block
+  position absolute
+
+.page-wrap
+  text-align left
+  width 90%
+  max-width 1350px
+  overflow hidden
+  margin 0 auto
+  position relative
+  +breakpoint(mama-bear)
+    width 96%
++breakpoint(baby-bear)
+  width 105%
+
+header.top
+  background-color $primary_color_darkened
+  darkbg()
+  text-align center
+h1
+  text-align center
+  padding ($padding / 2)
+  margin 0
+
+.content-wrap
+  background-color $content_bg_color
+  lightbg()
+
+.grid
+  clearfix()
+width 100%
+float left
+padding $padding
+padding-top 0
+position relative
++breakpoint(mama-bear)
+  padding 0 0 $padding/2 $padding/2
++breakpoint(baby-bear)
+  padding 0
+  float none
+  width 100%
+
+.grid-primary
+  width "calc(%s - 80px)" % percent($golden_major)
+  margin 0 30px 0 50px
+  +breakpoint(mama-bear)
+    width "calc(%s - 40px)" % percent($golden_major)
+  margin 0 15px 0 25px
+
+.grid-secondary
+  width "calc(%s - 80px)" % percent($golden_minor)
+  margin 0 30px 0 50px
+  +breakpoint(mama-bear)
+    width "calc(%s - 40px)" % percent($golden_minor)
+    margin 0 15px 0 25px
+
+.container
+  max-width 800px
+  margin 0 auto
+  min-height 100%
+  background white
+  text-align center
+
+.ag-fresh
+  text-align left
+
+.window-dialog
+  text-align right

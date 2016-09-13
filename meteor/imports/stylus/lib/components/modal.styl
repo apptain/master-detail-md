@@ -1,0 +1,74 @@
+body.modal-open {
+  overflow: hidden;
+}
+.modal-close 
+  color: #aaa;
+  font-size: 30px;
+  text-decoration: none;
+	float right
+  right: 5px;
+  top: -5px;
+	display block
+	height 30px
+	width 30px
+	
+.modal-close:hover {
+  color: #919191;
+}
+.window-wrap:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.window-wrap:target:before {
+  display: block;
+  width: 100%
+  height: 100%
+}
+.window-wrap:target .window-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+}
+.window-wrap {
+
+}
+.window-dialog {
+  background: #fefefe;
+  border: #333 solid 1px;
+  //border-radius: 5px;
+  position: fixed;
+  left: 2%;
+  top: 2%;
+  z-index: 9999;
+  width: 96%;
+  height: 96%;
+  overflow: scroll;
+}
+.modal-body {
+  text-align: left;
+}
+.window-header,
+.window-footer {
+  padding: 10px 20px;
+}
+.window-header {
+  border-bottom: #eee solid 1px;
+}
+.window-header h2 {
+  font-size: 20px;
+}
+.window-footer {
+  border-top: #eee solid 1px;
+  text-align: right;
+}
+/*ADDED TO STOP SCROLLING TO TOP*/
+#close {
+  display: none;
+}

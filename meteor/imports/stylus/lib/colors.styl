@@ -1,0 +1,21 @@
+//Thanks Kezz
+$primary_color = #000
+$content_bg_color = #eee
+$module_bg_color = #fff
+
+$primary_color_lightened = lighten($primary_color, 15%)
+$primary_color_darkened = darken($primary_color, 15%)
+$primary_color_greyed = lighten(desaturate($primary_color, 70%), 50%)
+$soft_gradient = linear-gradient(bottom, $primary_color_lightened 0%, $primary_color 2%, $primary_color 98%, $primary_color_darkened)
+
+auto_text_color()
+  if dark(@background-color)
+    color lighten(@background-color, 90%)
+  else
+    color $primary_color
+
+darkbg()
+  auto_text_color()
+
+lightbg()
+  auto_text_color()
