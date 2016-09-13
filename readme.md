@@ -27,4 +27,4 @@ meteor
 13. Use multi-action-api-middleware for notifications
 14. Add rollbar logging
 15. Add server side rendering
-16. Add and run eslint
+16. Add and run eslint  
