@@ -15,27 +15,27 @@ Template.afBootstrapDateTimePicker.rendered = function () {
   // instanciate datetimepicker
   $input.datetimepicker(opts);
 
-  // set and reactively update values
-  //this.autorun(function () {
-  //  var data = Template.currentData();
-  //  var dtp = $input.data("DateTimePicker");
-  //
-  //  // set field value
-  //  if (data.value instanceof Date) {
-  //    dtp.setDate(data.value);
-  //  } else {
-  //    dtp.setDate(); // clear
-  //  }
-  //
-  //  // set start date if there's a min in the schema
-  //  if (data.min instanceof Date) {
-  //    dtp.setMinDate(data.min);
-  //  }
-  //
-  //  // set end date if there's a max in the schema
-  //  if (data.max instanceof Date) {
-  //    dtp.setMaxDate(data.max);
-  //  }
-  //});
+  //set and reactively update values
+  this.autorun(function () {
+   var data = Template.currentData();
+   var dtp = $input.data("DateTimePicker");
+  
+   // set field value
+   if (data.value instanceof Date) {
+     dtp.setDate(data.value);
+   } else {
+     dtp.setDate(); // clear
+   }
+
+   // set start date if there's a min in the schema
+   if (data.min instanceof Date) {
+     dtp.setMinDate(data.min);
+   }
+
+   // set end date if there's a max in the schema
+   if (data.max instanceof Date) {
+     dtp.setMaxDate(data.max);
+   }
+  });
 
 };
