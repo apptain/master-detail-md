@@ -19,7 +19,7 @@ Template.afBootstrapDateTimePicker.rendered = function () {
   this.autorun(function () {
    var data = Template.currentData();
    var dtp = $input.data("DateTimePicker");
-  
+
    // set field value
    if (data.value instanceof Date) {
      dtp.setDate(data.value);
